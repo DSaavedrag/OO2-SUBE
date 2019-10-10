@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="datos.PrecioSubte" table="precioSubte">
+		<id column="idPrecioSubte" name="idPrecioSubte">
+			<generator class="identity"/>
+		</id>
+		<property column="precio" name="precio" type="double"/>
+		
+		<set name="lectoresSubte" table="lectorSubte" inverse="true" lazy="true" fetch="select">
+			<key column="idPrecioSubte" not-null="true" />
+			<one-to-many class="datos.LectorSubte" />
+		</set>
+
+	</class>
+</hibernate-mapping>

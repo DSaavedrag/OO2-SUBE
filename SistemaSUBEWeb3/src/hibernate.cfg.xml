@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//hibernate/Hibernate Configuration DTD
+3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost/sistemasube</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">fenixgroxx07</property>
+		<property name="connection.pool_size">1</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">false</property>
+		
+		<mapping resource="mapeo/Usuario.hbm.xml"/>
+		<mapping resource="mapeo/Beneficio.hbm.xml"/>
+		<mapping resource="mapeo/Tarjeta.hbm.xml"/>
+		<mapping resource="mapeo/Boleto.hbm.xml"/>
+		<mapping resource="mapeo/BotonColectivo.hbm.xml"/>
+		<mapping resource="mapeo/Lector.hbm.xml"/>
+		<mapping resource="mapeo/Linea.hbm.xml"/>
+		<mapping resource="mapeo/SaldoMinimo.hbm.xml"/>	
+		<mapping resource="mapeo/Carga.hbm.xml"/>
+		<mapping resource="mapeo/Boleteria.hbm.xml"/>
+		<mapping resource="mapeo/Estacion.hbm.xml"/>	
+		<mapping resource="mapeo/PrecioSubte.hbm.xml"/>
+		<mapping resource="mapeo/TramoTren.hbm.xml"/>
+		<mapping resource="mapeo/SeccionTren.hbm.xml"/>
+		
+		<!-- 
+		<mapping resource="mapeo/Beneficio.hbm.xml"/>			x		"x" -> quiere decir q ya está declarado mas arriba
+		<mapping resource="mapeo/Boleteria.hbm.xml"/>			x		"-" -> quiere decir q NO se declaro mas arriba
+		<mapping resource="mapeo/Boleto.hbm.xml"/>				x
+		<mapping resource="mapeo/Carga.hbm.xml"/>				x
+		<mapping resource="mapeo/Estacion.hbm.xml"/>			x
+		<mapping resource="mapeo/Lector.hbm.xml"/>				x
+		<mapping resource="mapeo/Linea.hbm.xml"/>				x
+		<mapping resource="mapeo/SaldoMinimo.hbm.xml"/>			x
+		<mapping resource="mapeo/BotonColectivo.hbm.xml"/>		x
+		<mapping resource="mapeo/SeccionTren.hbm.xml"/>			x
+		<mapping resource="mapeo/Tarjeta.hbm.xml"/>				x
+		<mapping resource="mapeo/TramoTren.hbm.xml"/>			x
+		<mapping resource="mapeo/Usuario.hbm.xml"/>				x
+		-->
+		
+	</session-factory>
+</hibernate-configuration>	

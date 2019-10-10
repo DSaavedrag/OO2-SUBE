@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="datos.Tarjeta" table="tarjeta">
+		<id column="idTarjeta" name="idTarjeta">
+			<generator class="identity"/>
+		</id>
+		<property column="saldo" name="saldo" type="double"/>
+		<property column="nivelRS" name="nivelRS" type="int"/>
+		<property column="inicioRS" name="inicioRS" type="calendar"/>	
+		<property column="baja" name="baja" type="boolean"/>
+		
+		<many-to-one name="usuario" class="datos.Usuario" column="idUsuario" not-null="false"/>
+		
+		<set name="boletos" table="boleto" order-by="idBoleto asc" inverse="true" lazy="true" fetch="select">
+	<key column="idTarjeta" not-null="true" />
+	<one-to-many class="datos.Boleto" />
+		</set>
+		<set name="cargas" table="carga" order-by="idCarga asc" inverse="true" lazy="true" fetch="select">
+			<key column="idTarjeta" not-null="false" />
+			<one-to-many class="datos.Carga" />
+		</set>
+	</class>
+</hibernate-mapping>

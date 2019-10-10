@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="datos.TramoTren" table="tramoTren">
+		<id column="idTramoTren" name="idTramoTren">
+			<generator class="identity"/>
+		</id>
+		
+		<many-to-one name="estacion1" class="datos.Estacion" column="idEstacion1" not-null="true"/>
+		
+		<many-to-one name="estacion2" class="datos.Estacion" column="idEstacion2" not-null="true"/>
+		
+		<many-to-one name="seccionTren" class="datos.SeccionTren" column="idSeccionTren" not-null="true"/>
+		
+	</class>
+</hibernate-mapping>

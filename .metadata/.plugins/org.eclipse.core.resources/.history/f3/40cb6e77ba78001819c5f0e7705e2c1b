@@ -1,0 +1,28 @@
+package test;
+
+import java.util.List;
+
+import datos.Boleto;
+import datos.Lector;
+import datos.LectorSubte;
+import datos.Tarjeta;
+import negocio.BoletoABM;
+import negocio.LectorABM;
+import negocio.LectorSubteABM;
+import negocio.TarjetaABM;
+
+public class TestCrearBoletoSubte {
+	public static void main(String[] args) throws Exception {
+		LectorSubteABM labm = LectorSubteABM.getInstanciaLectorSubteABM();
+		TarjetaABM tabm = TarjetaABM.getInstanciaTarjetaABM();
+		Tarjeta tarjeta = tabm.traer(3);	
+		LectorSubte lector = labm.traer(7);
+		System.out.println(lector);
+		lector.crearBoleto(tarjeta);
+		List<Boleto> lista= BoletoABM.getInstanciaBoletoABM().traer();
+		Boleto boletoAux = lista.get(lista.size()-1);
+		System.out.println(boletoAux);
+
+	}
+
+}

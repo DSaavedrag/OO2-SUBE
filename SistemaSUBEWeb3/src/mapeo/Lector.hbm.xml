@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="datos.Lector" table="lector">
+		<id column="idLector" name="idLector">
+			<generator class="identity"/>
+		</id>
+		
+		<set name="boletos" table="boleto" order-by="idBoleto asc" inverse="true" lazy="true" fetch="select">
+			<key column="idLector" not-null="true" />
+			<one-to-many class="datos.Boleto" />
+		</set>
+		
+		<many-to-one name="linea" class="datos.Linea" column="idLinea" not-null="true"/>
+		<many-to-one name="saldoMinimo" class="datos.SaldoMinimo" column="idSaldoMinimo" not-null="true"/>
+
+	<joined-subclass name="datos.LectorSubte" table="lectorSubte">
+		<key column="idLectorSubte"></key>
+		<property column="estacionSubte" name="estacionSubte" type="string"/>
+		<many-to-one name="precioSubte" class="datos.PrecioSubte" column="idPrecioSubte" not-null="false"/>
+	</joined-subclass>
+			
+	<joined-subclass name="datos.LectorTren" table="lectorTren">
+		<key column="idLectorTren"></key>
+		<property column="salida" name="salida" type="boolean"/>
+		<many-to-one name="estacion" class="datos.Estacion" column="idEstacion" not-null="true"/>
+	</joined-subclass>
+	
+ 	<joined-subclass name="datos.LectorColectivo" table="lectorColectivo">
+		<key column="idLectorColectivo"></key>
+		<property column="interno" name="interno" type="string"/>
+		<property column="estado" name="estado" type="int"/>
+	<set table = "lector_boton" name = "botonesColectivo" outer-join = "true" >
+			<key column = "idLectorColectivo" />
+			<many-to-many column = "idBotonColectivo" class ="datos.BotonColectivo" />
+		</set >
+	</joined-subclass>
+	
+	</class>
+</hibernate-mapping>

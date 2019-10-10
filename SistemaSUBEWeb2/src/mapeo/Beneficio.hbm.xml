@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="datos.Beneficio" table="beneficio">
+		<id column="idBeneficio" name="idBeneficio">
+			<generator class="identity"/>
+		</id>
+		<property column="beneficio" name="beneficio" type="string"/>
+		
+		<set name="usuarios" table="usuario" order-by="idUsuario asc" inverse="true" lazy="true" fetch="select">
+			<key column="idBeneficio" not-null="false" />
+			<one-to-many class="datos.Usuario" />
+		</set>
+		
+	<joined-subclass name="datos.TarifaSocial" table="tarifaSocial">
+	<key column="idTarifaSocial"></key>
+	<property column="porcentajeDescuento" name="porcentajeDescuento" type="double"/>
+	</joined-subclass>
+	
+	<joined-subclass name="datos.BoletoEstudiantil" table="boletoEstudiantil">
+	<key column="idBoletoEstudiantil"></key>
+	<property column="monto" name="monto" type="double"/>
+	</joined-subclass>
+	</class>
+</hibernate-mapping>

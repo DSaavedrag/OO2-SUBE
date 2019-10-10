@@ -1,0 +1,14 @@
+1526491914404	Delete element
+1526491919012	Delete element
+1526491923281	Delete element
+1526491944396	Rename type 'Descuento'
+1526491972614	Rename type 'DescuentoDao'
+1526491987314	Rename type 'DescuentoABM'
+1526492004160	Rename type 'MontoFijo'
+1526492016899	Rename type 'MontoFijoABM'
+1526492029335	Rename type 'MontoFijoDao'
+1526492063346	Rename type 'TestAgregarDescuento'
+1526492085097	Rename type 'TestAgregarMontoFijo'
+1526589754909	Rename field 'instanciaTarifaSocialABM'
+1526590143914	Rename type 'TestAgregarViajeGratis'
+1526591075310	Rename type 'SaldoMinimoDAo'

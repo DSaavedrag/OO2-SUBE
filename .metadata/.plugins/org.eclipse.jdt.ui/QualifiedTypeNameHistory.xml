@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="negocio.TarifaSocialABM"/>
+<fullyQualifiedTypeName name="datos.Beneficio"/>
+<fullyQualifiedTypeName name="negocio.BeneficioABM"/>
+<fullyQualifiedTypeName name="dao.TarjetaDao"/>
+<fullyQualifiedTypeName name="dao.LineaDao"/>
+<fullyQualifiedTypeName name="dao.LectorDao"/>
+<fullyQualifiedTypeName name="dao.SaldoMinimoDao"/>
+<fullyQualifiedTypeName name="datos.SaldoMinimo"/>
+<fullyQualifiedTypeName name="negocio.LineaABM"/>
+<fullyQualifiedTypeName name="datos.Linea"/>
+<fullyQualifiedTypeName name="negocio.LectorABM"/>
+<fullyQualifiedTypeName name="negocio.SaldoMinimoABM"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="datos.Lector"/>
+<fullyQualifiedTypeName name="negocio.SeccionTrenABM"/>
+<fullyQualifiedTypeName name="negocio.TramoTrenABM"/>
+<fullyQualifiedTypeName name="datos.Estacion"/>
+<fullyQualifiedTypeName name="datos.SeccionTren"/>
+<fullyQualifiedTypeName name="negocio.LectorTrenABM"/>
+<fullyQualifiedTypeName name="datos.LectorTren"/>
+<fullyQualifiedTypeName name="negocio.BoletoABM"/>
+<fullyQualifiedTypeName name="datos.Tarjeta"/>
+<fullyQualifiedTypeName name="negocio.CargaABM"/>
+<fullyQualifiedTypeName name="java.util.GregorianCalendar"/>
+<fullyQualifiedTypeName name="negocio.TarjetaABM"/>
+<fullyQualifiedTypeName name="negocio.EstacionABM"/>
+<fullyQualifiedTypeName name="negocio.BoleteriaABM"/>
+<fullyQualifiedTypeName name="datos.Boleteria"/>
+<fullyQualifiedTypeName name="datos.Carga"/>
+<fullyQualifiedTypeName name="negocio.Funciones"/>
+</qualifiedTypeNameHistroy>

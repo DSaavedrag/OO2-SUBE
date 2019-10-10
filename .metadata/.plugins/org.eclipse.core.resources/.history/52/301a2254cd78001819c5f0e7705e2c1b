@@ -1,0 +1,26 @@
+package test;
+
+import java.util.List;
+
+import datos.Boleteria;
+import datos.Boleto;
+import datos.Carga;
+import datos.Tarjeta;
+import negocio.BoleteriaABM;
+import negocio.TarjetaABM;
+
+public class TestCargarSaldo {
+	public static void main(String[] args) throws Exception {
+		BoleteriaABM babm = BoleteriaABM.getInstanciaBoleteriaABM();
+		TarjetaABM tabm = TarjetaABM.getInstanciaTarjetaABM();
+		Tarjeta tarjeta = tabm.traer(1);	
+		Boleteria boleteria = babm.traer(1);
+		System.out.println(boleteria);
+		boleteria.cargarSaldo(tarjeta,10);
+		List<Carga> lista= tabm.traerCargasDeTarjeta(tarjeta.getIdTarjeta());
+		Carga CargaAux = lista.get(lista.size()-1);
+		System.out.println(CargaAux);
+
+	}
+
+}
